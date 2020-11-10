@@ -1,0 +1,17 @@
+version: "2.2"
+services:
+  aize-payment-frontend:
+    build:
+      context: .
+      dockerfile: dockerfile-frontend
+    image: aize-payment-frontend:latest
+    container_name: aize-payment-frontend
+    tty: true
+    volumes:
+      - "./src:/aize-payment-frontend"
+    ports:
+      - "3000:3000"
+    networks:
+     - aize-payment-network
+networks:
+  aize-payment-network:

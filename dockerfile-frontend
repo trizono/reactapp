@@ -1,0 +1,7 @@
+FROM node:latest
+
+WORKDIR /aize-payment-frontend
+
+RUN npm install -g @aws-amplify/cli
+
+CMD ["/bin/bash"]
